@@ -1,1 +1,12 @@
-
+graph TD
+    A[User Query] --> B{Agent Router}
+    B -- "Needs Data" --> C[Vector DB / RAG]
+    B -- "Needs Action" --> D[Tool: Web Search]
+    C --> E[Contextual Prompt]
+    D --> E
+    E --> F[Claude 3.5 Sonnet]
+    F --> G[JSON Response]
+    G --> H[Final User Output]
+    
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style F fill:#bbf,stroke:#333,stroke-width:2px
