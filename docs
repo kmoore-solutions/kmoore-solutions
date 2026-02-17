@@ -1,4 +1,4 @@
-graph TD
+{graph TD
     A[User Query] --> B{Agent Router}
     B -- "Needs Data" --> C[Vector DB / RAG]
     B -- "Needs Action" --> D[Tool: Web Search]
@@ -10,3 +10,4 @@ graph TD
     
     style B fill:#f9f,stroke:#333,stroke-width:2px
     style F fill:#bbf,stroke:#333,stroke-width:2px
+}
